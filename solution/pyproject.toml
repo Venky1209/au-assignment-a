@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ledger"
+version = "0.1.0"
+description = "Interaction ledger & reporting pipeline (Agentic Universe take-home, Assignment A)"
+requires-python = ">=3.11"
+dependencies = ["cryptography>=42", "rich>=13"]
+
+[project.scripts]
+ledger = "ledger.cli:main"
+
+[tool.setuptools]
+packages = ["ledger"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
